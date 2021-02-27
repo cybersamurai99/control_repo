@@ -5,3 +5,6 @@ node default {
   owner => 'root',
   }
 }
+node 'jumprepo' {
+ include role::master_server
+ }
