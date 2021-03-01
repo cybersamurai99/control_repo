@@ -2,7 +2,7 @@ node 'jumprepo' {
  include role::master_server
   file {'/root/README':,
   ensure => file,
-  content => $fqdn,
+  content => "wellcome to ${fqdn}\n",
   owner => 'root',
   }
  }
