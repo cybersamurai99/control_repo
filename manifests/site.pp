@@ -1,19 +1,20 @@
 node default {
  file {'/root/README':,
   ensure => file,
-  content => 'This is a test',
+  content => $fqdn,
   owner => 'root',
   }
 }
 node 'jumprepo' {
  include role::master_server
+ file 
  }
 
 
-node /^web/ {
-include role::app_server
-}
+#node /^web/ {
+#include role::app_server
+#}
 
-node /^db/ {
-include role::db_server
-}
+#$node /^db/ {
+#include role::db_server
+#}
