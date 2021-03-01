@@ -1,12 +1,10 @@
-node default {
- file {'/root/README':,
+node 'jumprepo' {
+ include role::master_server
+  file {'/root/README':,
   ensure => file,
   content => $fqdn,
   owner => 'root',
   }
-}
-node 'jumprepo' {
- include role::master_server
  }
 
 
