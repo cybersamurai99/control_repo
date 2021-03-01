@@ -7,7 +7,6 @@ node default {
 }
 node 'jumprepo' {
  include role::master_server
- file 
  }
 
 
